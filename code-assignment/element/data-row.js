@@ -1,4 +1,4 @@
-import { BaseElement } from "./base-element";
+import { Books } from '../class/books.js'; 
 
 export class DataRow extends BaseElement { 
     constructor(jSonData, tbElement) { 
@@ -7,16 +7,14 @@ export class DataRow extends BaseElement {
         this.element = tbElement;
     }
 
-    getElementString(book) { 
-        return `
-        <tr class="${book.id}-row>
-            <td>${book.ISBN10}</td>
-            <td>${book.PublisherDate}</td> 
-            <td>${book.Title}</td> 
-            <td>${book.Athor}</td>
-            <td>${book.Price}</td>
-        </tr>
-        `
-        
+    displayBooks(book) { 
+      $(this.element);
+      const books = new Books(); 
+      this.dataArray.forEach((b) => {
+        books.add(b.id, b.ISBN10, b.PublisherDate, b.Title, b.URL, b.Author, b.Description, b.Image, b.price);
+      })
+      for (let book of books) { 
+        book.prependToElement('tbody');
+      }
     } 
 }

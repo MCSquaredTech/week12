@@ -1,5 +1,4 @@
 import { Book } from "./book";
-import { BaseElement } from "../element/base-element";
 
 export class Books { 
     constructor() {
@@ -27,10 +26,11 @@ export class Books {
     }
 
     add(isbn, pubDate, title, 
-            url, author, description, 
-            image, price) { 
+        url, author, description,image, price) { 
         this.bookArray.push(new Book(this.nextId, isbn, pubDate, 
-                    title, url, author, description, image, price));
+                title, url, author, description, image, price));
     }
+
+    
 
 }
