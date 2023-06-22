@@ -5,7 +5,7 @@ export class BaseElement {
 
     prependToElement(el) { 
         this.createElement();
-        el.perdend(this.element);
+        el.prepend(this.element);
     }
     
     appendToElement(el) { 

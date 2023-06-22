@@ -1,9 +1,9 @@
-import { BaseElement } from "../element/base-element";
+import { BaseElement } from "../element/base-element.js";
+import { TableDataRow } from "../element/data-row.js";
 
 export class Book extends BaseElement { 
-    constructor(id, isbn, pubDate, 
-                title, url, author, 
-                description, image, price) {
+    constructor(id, isbn, pubDate, title, url, author, description, image, price) {
+        super();
         this.id = id; 
         this.ISBN10 = isbn; 
         this.PublisherDate = pubDate; 
@@ -11,19 +11,20 @@ export class Book extends BaseElement {
         this.URL = url; 
         this.Author = author;
         this.Description = description; 
+        this.image = image;
         this.Price = price;            
     }
 
     getElementString() { 
         return `
-            <tr class="${this.book.id}"> 
-                <td>${this.book.ISBN10}</td>
-                <td>${this.book.PublisherDate}</td>
-                <td>${this.book.Title}</td>
-                <td>${this.book.Author}</td>
-                <td>${this.book.Price}</td>
+            <tr id="${this.id}-selected" class="tb"> 
+                <td class="${this.id}-td-i">${this.ISBN10}</td>
+                <td class="${this.id}-td-pd">${this.PublisherDate}</td>
+                <td class="${this.id}-td-t">${this.Title}</td>
+                <td class="${this.id}-td-a">${this.Author}</td>
+                <td class="${this.id}-td-p">${this.Price}</td>
+                <td id="${this.id}-delete" class="btn">&#128465;</td>
             </tr> 
-        `
+        `;
     }
-
 }

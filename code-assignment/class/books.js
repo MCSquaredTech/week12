@@ -1,4 +1,4 @@
-import { Book } from "./book";
+import { Book } from "./book.js";
 
 export class Books { 
     constructor() {
@@ -11,7 +11,7 @@ export class Books {
         return this._id;
     }
     set id(value) { 
-        this_id = value
+        this._id = value;
     }
 
     get nextId() {
@@ -19,16 +19,18 @@ export class Books {
     }
 
     get book() { 
-        return this._book
+        return this._book;
     }
     set book(value) { 
         this._book = value;
     }
 
-    add(isbn, pubDate, title, 
+    add(id, isbn, pubDate, title, 
         url, author, description,image, price) { 
-        this.bookArray.push(new Book(this.nextId, isbn, pubDate, 
-                title, url, author, description, image, price));
+        const b = new Book(id, isbn, pubDate, 
+            title, url, author, description, image, price); 
+        this.bookArray.push(b);
+        this.book = b;
     }
 
     

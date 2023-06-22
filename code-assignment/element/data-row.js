@@ -1,20 +1,43 @@
-import { Books } from '../class/books.js'; 
 
-export class DataRow extends BaseElement { 
-    constructor(jSonData, tbElement) { 
-        super();
-        this.dataArray = jSonData; 
-        this.element = tbElement;
+import { Books } from "../class/books.js";
+import { BookDataService } from "../data-service/book-data-service.js";
+
+export class TableDataRow { 
+    constructor(element) { 
+        // super();
+        this.books = new Books(); 
+        this.element = element;
     }
 
-    displayBooks(book) { 
-      $(this.element);
-      const books = new Books(); 
-      this.dataArray.forEach((b) => {
-        books.add(b.id, b.ISBN10, b.PublisherDate, b.Title, b.URL, b.Author, b.Description, b.Image, b.price);
-      })
-      for (let book of books) { 
-        book.prependToElement('tbody');
-      }
+    dbGetBooks(book) { 
+      BookDataService.getBooks().then( books => this.display(books));
     } 
+
+    display(books) {
+      $(this.element).empty();
+      for (let book of books) {
+        this.books.add(book.id, book.ISBN10, book.PublisherDate, book.Title, book.URL, book.Author, book.Description, book.Image, book.Price)
+        this.books.book.appendToElement($(this.element));
+        this.eventDelete(book);
+        this.eventSelect(book);
+      }
+    }
+
+    eventDelete(book) { 
+      $(`#${book.id}-delete`).on('click', () => {
+        console.log('delete book with row-index id:', book.id);
+        
+      });
+    }
+
+    eventSelect(book) {
+      $(`#${book.id}-selected`).on('click', () => {
+        $(`#${book.id}-selected`).addClass('table-active').siblings().removeClass('table-active');
+        console.log(book.Title, 'Selected')
+        this.books.id = book.id; 
+        console.log('You have selected row-index id:', this.books.id)
+      })
+    }
+
+    
 }
