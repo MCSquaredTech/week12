@@ -23,7 +23,6 @@ export class Book extends BaseElement {
                 <td class="${this.id}-td-t">${this.Title}</td>
                 <td class="${this.id}-td-a">${this.Author}</td>
                 <td class="${this.id}-td-p">$${this.Price}</td>
-                <td id="${this.id}-delete" class="btn">&#128465;</td>
             </tr> 
         `;
     }

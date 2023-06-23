@@ -22,6 +22,10 @@ hr:after {
     height: 328px;
 }
 
+.book-title { 
+    float: right;
+}
+
 .book-description { 
     left: 275px;
 }
@@ -45,9 +49,6 @@ hr:after {
  
 .table-active { 
     border: 1px solid black;
-    box-shadow: 5px 5px 5px 0 rgb(0, 0, 170);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 15px;
     font-weight: 600;
 }
 

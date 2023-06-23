@@ -25,7 +25,14 @@ export class Books {
         this._book = value;
     }
 
-    add(id, isbn, pubDate, title, 
+    addObjects(obj) { 
+        const b  = new Book(obj.id, obj.ISBN10,  obj.PublisherDate, obj.Title, 
+            obj.URL, obj.Author, obj.Description, obj.Image, obj.Price);
+        this.bookArray.push(b);
+        this.book = b;
+    }
+
+    addNew(id, isbn, pubDate, title, 
         url, author, description,image, price) { 
         const b = new Book(id, isbn, pubDate, 
             title, url, author, description, image, price); 

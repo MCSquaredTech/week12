@@ -8,6 +8,6 @@ export class BookDataService {
     }
 
     static getBookByID(id) { 
-        return $.get(`${this.url} /${id}`);
+        return $.get(this.url + `/${id}`);
     }
 }

@@ -7,32 +7,116 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./css/site-style.css">
 </head>
-<body class="container">
-    <div class="row">
-        <div class="col-sm">
-            <h3>MC<sup>2</sup> Technology</h3>
-            <h5 class="text-centered">The Bookshelf</h5>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h3>MC<sup>2</sup> Technology</h3>
+                <h5 class="text-centered">The Bookshelf</h5>
+            </div>
+        </div>
+        <div class="row">
+            <hr>
+            <!-- Start Book Carousel Code -->
+            <div class="col-sm">
+                <div id="carouselRecommendBooks" class="carousel slide bg-gray" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselRecommendBooks" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselRecommendBooks" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselRecommendBooks" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="book-size col-sm-8">
+                          <img src="./images/JavaScript-Cookbook.jpg" class="d-block w-100 book-size" alt="JavaScript-Cookbook">  
+                        </div>
+                        
+                        <div class="carousel-caption d-none d-md-block book-description col-sm">
+                          <h5>JavaScript Cookbook</h5>
+                          <p>Why reinvent the wheel every time you run into a problem with JavaScript? This cookbook is chock-full of code recipes for common programming tasks, along with techniques for building apps that work in any browser. You'll get adaptable code samples that you can add to almost any project--and you'll learn more about JavaScript in the process.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="book-size col-sm-6">
+                          <img src="./images/JavaScript-design.jpg" class="d-block w-100 book-size" alt="JavaScript-design-patterns">  
+                        </div>
+                        
+                        <div class="carousel-caption d-none d-md-block book-description col-sm">
+                          <h5>JavaScript Design Patterns</h5>
+                          <p>Do you want to write beautiful, structured, and maintainable JavaScript by applying modern design patterns to the language? Do you want clean, efficient, manageable code? Want to stay up-to-date with the latest best practices? If so, the updated second edition of Learning JavaScript Design Patterns is the ideal place to start.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="book-size col-sm-6">
+                          <img src="./images/JavaScript-definitive.jpg" class="d-block w-100 book-size" alt="JavaScript-definitive">  
+                        </div>
+                        
+                        <div class="carousel-caption d-none d-md-block book-description col-sm">
+                          <h5>JavaScript The Definitive Guide</h5>
+                          <p>JavaScript is the programming language of the web and is used by more software developers today than any other programming language. For nearly 25 years this best seller has been the go-to guide for JavaScript programmers. The seventh edition is fully updated to cover the 2020 version of JavaScript, and new chapters cover classes, modules, iterators, generators, Promises, async/await, and metaprogramming. You’ll find illuminating and engaging example code throughout.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecommendBooks" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselRecommendBooks" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+              <!-- Nav Menu Starts Here -->
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <button id="add" class="nav-link">Add</button>
+                        </li>
+                        <li class="nav-item">
+                          <button id="edit" class="nav-link disabled">Edit</a>
+                        </li>
+                        <li class="nav-item">
+                          <button id="delete" class="nav-link disabled">Delete</a>
+                        </li>
+                      </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div id="left-div" class="col-sm-4 toggle-hide">
+              
+            </div>
+            <div id="mid-div" class="col-sm table-responsive">
+                <table class="table table-primary table-striped table-hover align-center tbl-bookshelf"> 
+                  <thead>
+                    <th>ISBN</th>
+                    <th>Pub Date</th> 
+                    <th>Title</th>
+                    <th>Author</th> 
+                    <th>Price</th>    
+                  </thead>
+                  <tbody class="data-rows">
+                    
+                  </tbody>
+                </table>
+            </div>
+            <div id="right-div" class="col-sm-6 toggle-hide">
+                <div class="book-form mb-3">
+                    <div class="card">
+                        <img src="./images/JavaScript-Cookbook.jpg" alt="book images .${this.book.Title}">  
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </div>
-    <div class="carousel"></div>
-    <div class="nav"></div>
-    <div class="table">
-        <table class="table table-primary table-striped table-hover align-center tbl-bookshelf"> 
-            <thead>
-              <th>ISBN</th>
-              <th>Date</th> 
-              <th>Title</th>
-              <th>Author</th> 
-              <th>Price</th>    
-              <th></th>
-            </thead>
-            <tbody class="data-rows">
-              
-            </tbody>
-          </table>
-    </div>
+    
 </body>
-<script src="/node_modules/jquery/dist/jquery.js"></script>
+<script src="./node_modules/jquery/dist/jquery.js"></script>
 <script src="app.js"  type="module"></script>
-<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </html>
