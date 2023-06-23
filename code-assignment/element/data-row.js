@@ -4,8 +4,7 @@ import { BookDataService } from "../data-service/book-data-service.js";
 
 export class TableDataRow { 
     constructor(element) { 
-        // super();
-        this.books = new Books(); 
+        
         this.element = element;
     }
 
@@ -15,6 +14,8 @@ export class TableDataRow {
 
     display(books) {
       $(this.element).empty();
+      this.books = new Books(); 
+
       for (let book of books) {
         this.books.add(book.id, book.ISBN10, book.PublisherDate, book.Title, book.URL, book.Author, book.Description, book.Image, book.Price)
         this.books.book.appendToElement($(this.element));

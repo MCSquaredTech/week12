@@ -44,8 +44,10 @@ hr:after {
 }
  
 .table-active { 
-    border: 5px solid white;
-    background: none repeat scroll 0 0 blue;
-    color: white; 
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px 0 rgb(0, 0, 170);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: 600;
 }
 
