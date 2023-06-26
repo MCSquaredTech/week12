@@ -11,7 +11,7 @@ export class Book extends BaseElement {
         this.URL = url; 
         this.Author = author;
         this.Description = description; 
-        this.image = image;
+        this.Image = image;
         this.Price = price;            
     }
 

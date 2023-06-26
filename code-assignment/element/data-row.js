@@ -18,9 +18,19 @@ export class TableDataRow {
       BookDataService.getBookByID(id).then(book => this.displayBook(book));
     }
 
-    dbcreateBook(book) { 
-      BookDataService.createBook(book).then(BookDataService.getBooks()
+    dbCreateBook(book) { 
+      BookDataService.createBook(book).then(books => BookDataService.getBooks()
               .then(books => this.displayBooks(books)));
+    }
+
+    dbDeleteBook(id) { 
+      BookDataService.deleteBook(id).then(books => BookDataService.getBooks()
+                            .then(() => this.closeRight()));
+    }
+
+    dbUpdateBook(book) { 
+      BookDataService.updateBook(book).then(books => BookDataService.getBooks()
+                .then(books => this.displayBooks(books)));
     }
 
     displayBooks(books) {
@@ -45,15 +55,19 @@ export class TableDataRow {
         this.eventClose();
     }
 
+    closeRight() { 
+      $('#right-div').removeClass('toggle-show');
+      $('#right-div').addClass('toggle-hide');
+      $('#carousel-toggle').show(); 
+      $('#edit').addClass('disabled');
+      $('#delete').addClass('disabled');
+      $('#add').removeClass('disabled');
+      this.dbGetBooks();
+    }
+
     eventClose() {
-        $('#close-button').on('click', () => {
-        $('#right-div').removeClass('toggle-show');
-        $('#right-div').addClass('toggle-hide');
-        $('#carousel-toggle').show(); 
-        $('#edit').addClass('disabled');
-        $('#delete').addClass('disabled');
-        $('#add').removeClass('disabled');
-        this.dbGetBooks()
+      $('#close-button').on('click', () => {
+          this.closeRight();
         });
         
     }
@@ -63,13 +77,27 @@ export class TableDataRow {
         e.preventDefault();
 
         let book = add.getBook();
-        this.dbcreateBook(book);
+        this.dbCreateBook(book);
         
         $('#left-div').removeClass('toggle-show');
-          $('#left-div').addClass('toggle-hide');
-          $("#left-div").empty();
+        $('#left-div').addClass('toggle-hide');
+        $("#left-div").empty();
 
       });
+    }
+
+    eventUpdate(edit) {
+      $('#form-book').on('submit', async (e) => {
+        e.preventDefault();
+
+        let book = edit.updateBook();
+        this.dbUpdateBook(book);
+
+        $('#left-div').removeClass('toggle-show');
+        $('#left-div').addClass('toggle-hide');
+        $("#left-div").empty();
+      })
+      
     }
 
     eventAdd() { 
@@ -85,10 +113,24 @@ export class TableDataRow {
         });
     }
     eventDelete(book) { 
-      $(`#${book.id}-delete`).on('click', () => {
-        deleteFlag = true;
-        console.log('delete book with row-index id:', book.id);
-        
+      $(`#delete`).on('click', () => {
+
+        this.dbDeleteBook(book.id);
+      });
+    }
+
+    eventEdit(book) { 
+      const editBook = new AddBook();
+      $('#edit').on('click', () => { 
+        this.closeRight();
+        $('#left-div').removeClass('toggle-hide');
+        $('#left-div').addClass('toggle-show');
+        $("#left-div").empty()
+
+        editBook.appendToElement($('#left-div'));
+        editBook.editBook(book);
+        this.eventUpdate(editBook);
+
       });
     }
 
@@ -98,8 +140,9 @@ export class TableDataRow {
         $('#edit').removeClass('disabled');
         $('#delete').removeClass('disabled');
         $('#add').addClass('disabled');
+        this.eventDelete(book);
+        this.eventEdit(book);
         this.dbGetBook(book.id);
-      })
-     
+      })    
     }   
 }

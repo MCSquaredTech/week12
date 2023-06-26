@@ -1,46 +1,101 @@
 [
- {
-  "ISBN10": "1492055751",
-  "PublisherDate": "2021-04-24",
-  "Title": "JavaScript Cookbook: Programming the Web",
-  "URL": "https://amzn.to/3C5VeJS",
-  "Author": "Adam D Scott & Matthew MacDonald",
-  "Description": "Why reinvent the wheel every time you run into a problem with JavaScript? This cookbook is chock-full of code recipes for common programming tasks, along with techniques for building apps that work in any browser. You'll get adaptable code samples that you can add to almost any project--and you'll learn more about JavaScript in the process.",
-  "Image": "./images/JavaScript-Cookbook.jpg",
-  "Price": "36.41",
-  "id": "1"
- },
- {
-  "ISBN10": "1098139879",
-  "PublisherDate": "2023-06-06",
-  "Title": "Learning JavaScript Design Patterns: A JavaScript and React Development Guide",
-  "URL": "https://amzn.to/43qxDiV",
-  "Author": "Addy Osmani",
-  "Description": "Do you want to write beautiful, structured, and maintainable JavaScript by applying modern design patterns to the language? Do you want clean, efficient, manageable code? Want to stay up-to-date with the latest best practices? If so, the updated second edition of Learning JavaScript Design Patterns is the ideal place to start.",
-  "Image": "./images/JavaScript-design.jpg",
-  "Price": "56.43",
-  "id": "2"
- },
- {
-  "ISBN10": "1491952024",
-  "PublisherDate": "2020-06-23",
-  "Title": "JavaScript - The Definitive Guide: Master the World's Most-Used Programming Language",
-  "URL": "https://amzn.to/42jVlMF",
-  "Author": "David Flanagan",
-  "Description": "JavaScript is the programming language of the web and is used by more software developers today than any other programming language. For nearly 25 years this best seller has been the go-to guide for JavaScript programmers. The seventh edition is fully updated to cover the 2020 version of JavaScript, and new chapters cover classes, modules, iterators, generators, Promises, async/await, and metaprogramming. You’ll find illuminating and engaging example code throughout.",
-  "Image": "./images/JavaScript-definitive.jpg",
-  "Price": "38.49",
-  "id": "3"
- },
- {
-  "ISBN10": "1939924529",
-  "PublisherDate": "2016-01-18",
-  "Title": "LinkedIn in 30 Minutes: How to Create a Rock Solid LinkedIn Profile and Build Connections that matter",
-  "URL": "https://amzn.to/3qnWK7G",
-  "Author": "Angela Rose",
-  "Description": "Updated - buy it now! If you're serious about taking your career to the next level, you need to be on LinkedIn®. In LinkedIn In 30 Minutes (2nd Edition), author Angela Rose will show you how to make a rock-solid LinkedIn profile and expand your network. Whether you want to find a new job on LinkedIn or advance your career, this guide can be the blueprint for a supercharged LinkedIn strategy.",
-  "Image": "./images/LinkedIn.jpg",
-  "Price": "11.99",
-  "id": "4"
- }
-]
+    {
+     "ISBN10": "1492055751",
+     "PublisherDate": "2021-04-24",
+     "Title": "JavaScript Cookbook: Programming the Web",
+     "URL": "https://amzn.to/3C5VeJS",
+     "Author": "Adam D Scott & Matthew MacDonald",
+     "Description": "Why reinvent the wheel every time you run into a problem with JavaScript? This cookbook is chock-full of code recipes for common programming tasks, along with techniques for building apps that work in any browser. You'll get adaptable code samples that you can add to almost any project--and you'll learn more about JavaScript in the process.",
+     "Image": "./images/JavaScript-Cookbook.jpg",
+     "Price": "36.41",
+     "id": "1"
+    },
+    {
+     "ISBN10": "1098139879",
+     "PublisherDate": "2023-06-06",
+     "Title": "Learning JavaScript Design Patterns: A JavaScript and React Development Guide",
+     "URL": "https://amzn.to/43qxDiV",
+     "Author": "Addy Osmani",
+     "Description": "Do you want to write beautiful, structured, and maintainable JavaScript by applying modern design patterns to the language? Do you want clean, efficient, manageable code? Want to stay up-to-date with the latest best practices? If so, the updated second edition of Learning JavaScript Design Patterns is the ideal place to start.",
+     "Image": "./images/JavaScript-design.jpg",
+     "Price": "56.43",
+     "id": "2"
+    },
+    {
+     "ISBN10": "1491952024",
+     "PublisherDate": "2020-06-23",
+     "Title": "JavaScript - The Definitive Guide: Master the World's Most-Used Programming Language",
+     "URL": "https://amzn.to/42jVlMF",
+     "Author": "David Flanagan",
+     "Description": "JavaScript is the programming language of the web and is used by more software developers today than any other programming language. For nearly 25 years this best seller has been the go-to guide for JavaScript programmers. The seventh edition is fully updated to cover the 2020 version of JavaScript, and new chapters cover classes, modules, iterators, generators, Promises, async/await, and metaprogramming. You’ll find illuminating and engaging example code throughout.",
+     "Image": "./images/JavaScript-definitive.jpg",
+     "Price": "38.49",
+     "id": "3"
+    },
+    {
+     "ISBN10": "1939924529",
+     "PublisherDate": "2016-01-18",
+     "Title": "LinkedIn in 30 Minutes: How to Create a Rock Solid LinkedIn Profile and Build Connections that matter",
+     "URL": "https://amzn.to/3qnWK7G",
+     "Author": "Angela Rose",
+     "Description": "Updated - buy it now! If you're serious about taking your career to the next level, you need to be on LinkedIn®. In LinkedIn In 30 Minutes (2nd Edition), author Angela Rose will show you how to make a rock-solid LinkedIn profile and expand your network. Whether you want to find a new job on LinkedIn or advance your career, this guide can be the blueprint for a supercharged LinkedIn strategy.",
+     "Image": "./images/LinkedIn.jpg",
+     "Price": "11.99",
+     "id": "4"
+    },
+    {
+     "ISBN10": "9781720043997",
+     "PublisherDate": "2017-09-14",
+     "Title": "The Road to React: Your journey to master plain yet pragmatic React.js ",
+     "URL": "https://www.amazon.com/Road-learn-React-pragmatic-React-js/dp/172004399X/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1687793555&sr=8-1",
+     "Author": "Robin Wieruch",
+     "Description": "The Road to React: The React.js with Hooks in JavaScript Book (2023 Edition) - is a comprehensive and pragmatic yet concise React with Hooks (+ opt-in TypeScript) book. Purchase of this book includes free online access to the always up-to-date digital book.\n\nWhat you will learn.\n\nIn \"The Road to React\" you will learn about all the fundamentals of React.js with Hooks while building a full-blown React application step by step. While you create the React application, every chapter will introduce you to a new React key feature. However, there is more than only the fundamentals: The book dives into related topics (e.g. React with TypeScript, Testing, Performance Optimizations) and advanced feature implementations like client- and server-side searching. At the end of the book, you will have a fully working deployed React application.",
+     "Image": "./images/Road-to-React.jpg",
+     "Price": "28.49",
+     "id": "5"
+    },
+    {
+     "ISBN10": "1492085847",
+     "PublisherDate": "2021-09-14",
+     "Title": "React Cookbook: Recipes for Mastering the React Framework",
+     "URL": "https://www.amazon.com/gp/aw/d/1492085847/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=39964169e3c8ab15e27a8da10228f9fb&hsa_cr_id=0&qid=1687794608&sr=1-2-9e67e56a-6f64-441f-a281-df67fc737124&ref_=sbx_be_s_sparkle_lsi4d_asin_1_img&pd_rd_w=Mz5il&content-id=amzn1.sym.cd95889f-432f-43a7-8ec8-833616493f4a%3Aamzn1.sym.cd95889f-432f-43a7-8ec8-833616493f4a&pf_rd_p=cd95889f-432f-43a7-8ec8-833616493f4a&pf_rd_r=S7J7F9PGDTGNJ1MMPSHE&pd_rd_wg=FnuGA&pd_rd_r=dbfadba0-ee7d-4429-8886-c5e88448f6e9",
+     "Author": "Dawn Griffith",
+     "Description": "React helps you create and work on an app in just a few minutes. But learning how to put all the pieces together is hard. How do you validate a form? Or implement a complex multistep user action without writing messy code? How do you test your code? Make it reusable? Wire it to a backend? Keep it easy to understand? The React Cookbook delivers answers fast.\n\nMany books teach you how to get started, understand the framework, or use a component library with React, but very few provide examples to help you solve particular problems. This easy-to-use cookbook includes the example code developers need to unravel the most common problems when using React, categorized by topic area and problem.\n\nYou'll learn how to:\n\n    Build a single-page application in React using a rich UI\n    Create progressive web applications that users can install and work with offline\n    Integrate with backend services such as REST and GraphQL\n    Automatically test for accessibility problems in your application\n    Secure applications with fingerprints and security tokens using WebAuthn\n    Deal with bugs and avoid common functional and performance problems ",
+     "Image": "./images/React-cookbook.jpg",
+     "Price": "42.99",
+     "id": "6"
+    },
+    {
+     "ISBN10": "979-8656504492",
+     "PublisherDate": "2020-06-27",
+     "Title": "The Markdown Guide",
+     "URL": "https://www.amazon.com/Markdown-Guide-Matt-Cone/dp/B08BW8L1P6/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1687796594&sr=1-1",
+     "Author": "Matt Cone",
+     "Description": "\nThe Markdown markup language is one of the most popular plain-text formatting languages available. Now you can learn the Markdown syntax with the book that's been called \"the best Markdown reference.\" Designed for both novices and experts, The Markdown Guide is a comprehensive reference manual that has everything you need to get started and master the Markdown syntax. ",
+     "Image": "./images/markdown.jpg",
+     "Price": "7.99",
+     "id": "7"
+    },
+    {
+     "ISBN10": "9781491943120",
+     "PublisherDate": "2016-06-28",
+     "Title": "Learning Node: Moving to the Server-Side 2nd Edition ",
+     "URL": "https://www.amazon.com/gp/aw/d/1491943122/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=87a2e9bab6b64756ac7f6a27757a6e29&hsa_cr_id=0&qid=1687798643&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&ref_=sbx_be_s_sparkle_lsi4d_asin_0_img&pd_rd_w=ACUtg&content-id=amzn1.sym.cd95889f-432f-43a7-8ec8-833616493f4a%3Aamzn1.sym.cd95889f-432f-43a7-8ec8-833616493f4a&pf_rd_p=cd95889f-432f-43a7-8ec8-833616493f4a&pf_rd_r=S92V4Q3BCFYKFPCKHQFK&pd_rd_wg=f86FJ&pd_rd_r=94ce4583-359a-4d9e-856b-f0d0ba424d5b",
+     "Author": "Shelley Power",
+     "Description": "Take your web development skills from browser to server with Node—and learn how to write fast, highly scalable network applications on this JavaScript-based platform. Updated for the latest Node Long Term Support (LTS) and Node Current (6.0) releases, this hands-on edition helps you master Node’s core fundamentals and gain experience with several built-in and contributed modules.\n\nGet up to speed on Node’s event-driven, asynchronous I/O model for developing data-intensive applications that are frequently accessed but computationally simple. If you’re comfortable working with JavaScript, this book provides many programming and deployment examples to help you take advantage of server-side development with Node.",
+     "Image": "./images/learn-node.jpg",
+     "Price": "26.49",
+     "id": "8"
+    },
+    {
+     "ISBN10": "1803234504",
+     "PublisherDate": "2022-12-26",
+     "Title": "React Key Concepts: Consolidate your knowledge of React's core features ",
+     "URL": "https://www.amazon.com/React-Key-Concepts-Consolidate-knowledge/dp/1803234504/ref=sr_1_1_sspa?crid=JAK5SVXMR6XW&keywords=Node.js&qid=1687800014&s=books&sprefix=node.js%2Cstripbooks%2C181&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
+     "Author": "Maximilian Schwarzmüller",
+     "Description": "Key Features\n\n    A clear, concise explanation of core React 18 functionalities to promote quick, easy reference\n    Gain a deep understanding of key React concepts with the help of step-by-step derivations\n    Work with practical exercises that challenge you to apply your new skills and build your own simple apps\n\nBook Description\n\nAs the most popular JavaScript library for building modern, interactive user interfaces, React is an in-demand framework that'll bring real value to your career or next project. But like any technology, learning React can be tricky, and finding the right teacher can make things a whole lot easier.\n\nMaximilian Schwarzmuller is a bestselling instructor who has helped over two million students worldwide learn how to code, and his latest React video course (React — The Complete Guide) has over six hundred thousand students on Udemy.\n\nMax has written this quick-start reference to help you get to grips with the world of React programming. Simple explanations, relevant examples, and a clear, concise approach make this fast-paced guide the ideal resource for busy developers.\n\nThis book distills the core concepts of React and draws together its key features with neat summaries, thus perfectly complementing other in-depth teaching resources. So, whether you've just finished Max's React video course and are looking for a handy reference tool, or you've been using a variety of other learning materials and now need a single study guide to bring everything together, this is the ideal companion to support you through your next React projects. Plus, it's fully up to date for React 18, so you can be sure you're ready to go with the latest version.\nWhat you will learn\n\n    Build modern, user-friendly, and reactive web apps\n    Create components and utilize props to pass data between them\n    Handle events, perform state updates, and manage conditional content\n    Apply styles dynamically and conditionally to create a modern UI\n    Use advanced state management techniques such as React's context API\n    Utilize React router to render different pages for different URLs\n    Understand key best practices and optimization opportunities",
+     "Image": "./images/React-Key-Concepts.jpg",
+     "Price": "40.49",
+     "id": "9"
+    }
+   ]

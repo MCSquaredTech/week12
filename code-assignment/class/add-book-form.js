@@ -11,10 +11,36 @@ export class AddBook extends BaseElement {
         let formArray = document.forms['form-book'];
         this.book.addNew('', formArray.isbn.value, formArray.pubdate.value, formArray.title.value, formArray.url.value, 
                     formArray.author.value, formArray.description.value, formArray.image.value, formArray.price.value);
-        formArray.value = '';
 
         return this.book.book;
         
+    }
+
+    updateBook() { 
+        let formArray = document.forms['form-book'];
+        this.book.ISBN10 = formArray.isbn.value; 
+        this.book.PublisherDate = formArray.pubdate.value;
+        this.book.Title = formArray.title.value; 
+        this.book.URL = formArray.url.value;
+        this.book.Author = formArray.author.value; 
+        this.book.Description = formArray.description.value; 
+        this.book.Image = formArray.image.value; 
+        this.book.Price = formArray.price.value;
+
+        return this.book;
+    }
+
+    editBook(book) { 
+        this.book = book;
+        let formArray = document.forms['form-book'];
+        formArray.isbn.value = this.book.ISBN10; 
+        formArray.pubdate.value = this.book.PublisherDate;
+        formArray.title.value = this.book.Title; 
+        formArray.url.value = this.book.URL;
+        formArray.author.value = this.book.Author; 
+        formArray.description.value = this.book.Description; 
+        formArray.image.value = this.book.Image; 
+        formArray.price.value = this.book.Price;
     }
 
     getElementString() { 

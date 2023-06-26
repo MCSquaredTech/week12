@@ -33,7 +33,7 @@ export class Books {
     }
 
     addNew(id, isbn, pubDate, title, 
-        url, author, description,image, price) { 
+        url, author, description, image, price) { 
         const b = new Book(id, isbn, pubDate, 
             title, url, author, description, image, price); 
         this.bookArray.push(b);
