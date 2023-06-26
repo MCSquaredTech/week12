@@ -10,4 +10,25 @@ export class BookDataService {
     static getBookByID(id) { 
         return $.get(this.url + `/${id}`);
     }
+
+    static createBook(book) {
+        return $.post(this.url, book)
+    }
+
+    static updateBook(book) { 
+        return $.ajax({
+            url: this.url + `/${book.id}`, 
+            dataType: 'json', 
+        data: JSON.stringify(book),
+        contentType: 'application/json', 
+        type: 'PUT'
+        });
+    }
+
+    static deleteBook(id) { 
+        return $.ajax({ 
+            url: this.url + `/${id}`,
+            type: 'DELETE'
+        })
+    }
 }
